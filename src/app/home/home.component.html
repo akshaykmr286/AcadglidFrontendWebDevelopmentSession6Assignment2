@@ -1,0 +1,28 @@
+<!--  <h3>{{welcomeTitle}}</h3>
+  <p>{{welcomeMsg}}</p>
+-->
+
+<div class="container">
+    <h1>Basic Form</h1>
+    <h4 class="bold red">NOTE: Change the value in form and press submit to see result.</h4>
+    <form #basicform="ngForm" (ngSubmit)="onSubmit(basicform.value)">
+      <div class="form-group">
+        <label for="title" >Title</label>
+        <input type="text" class="form-control" [ngModel]="title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="fname" >First Name</label>
+        <input type="text" class="form-control" [ngModel]="fname" name="fname" required>
+      </div>
+      <div class="form-group">
+        <label for="lname" >Last Name</label>
+        <input type="text" class="form-control" [ngModel]="lname" name="lname" required>
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    <hr>
+    <div class="green bold">
+      <h3 class="bold brown underline">RESULT:</h3>
+       {{title}} {{fname}} {{lname}}
+    </div>
+</div>
